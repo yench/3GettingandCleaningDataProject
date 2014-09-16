@@ -1,4 +1,4 @@
-# This script aims to create a new dataset called second from the 
+# This script aims to create a new dataset called second from the "Human Activity Recognition Using Smartphones Datasets".
 
 # 1. Training data and test data are labeled with descriptive variable names, which are the names of the features.
 # ---------------read and label training data---------------
