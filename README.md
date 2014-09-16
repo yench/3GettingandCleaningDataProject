@@ -16,7 +16,7 @@ For more information on the original dataset, please check [this link](http://ar
 
 From the original dataset, a new, tidy dataset called `second` is generated in the following order:
  1. Training data and test data are labeled with descriptive variable names, which are the names of the features.
- 2. The training data and test data of the original dataset were merged to create one data set.
+ 2. The training data and test data of the original dataset were merged to create one single data set.
  3. Only the measurements on the mean and standard deviation for each measurement were extracted.
  4. Descriptive activity names (`walking`, `walking_upstairs`, `walking_downstairs`, `sitting`, `standing`, `laying`) were used to replace the integer numbers used in the original dataset.
  5. A second, tidy dataset with the average of each variable for each activity and each subject is generated.  
@@ -28,6 +28,13 @@ This repo contains 3 fiels: `README.md`, `run_analysis.R`, and `codebook.md`.
   * `README.md`: the file you are reading right now. It is an introduction on the whole process of how `second` dataset is obtained from the original dataset.  
   * `run_analysis.R`: the R script for excecuting the process to create `second`. When the original dataset is in the R working directory and unzipped, running this R script would create `second`.
   * `Codecook.md`: the codebook explaining the meaning of codes in the `second` dataset.
+
+
+### How to apply the run_analysis.R script to create the `second` dataset? 
+ 1. Download and unzip the "Human Activity Recognition Using Smartphones Datasets", and set the folder `UCI HAR Datasets` as your `R` working directory.
+ 2. Move `run_analysis.R` into the `UCI HAR Datasets` folder.
+ 3. Enter the command `source("run_analysis.R")` in R, and you'll find that a file named `second_dataset.txt` is created in the `UCI HAR Datasets` folder. 
+ 4. This txt file contains the `second` dataset generated, and you can read it in R with the command `read.table("second_data_set.txt",header=TRUE,check.names=FALSE)`.   
 
   
 ### Reference
