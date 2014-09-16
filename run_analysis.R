@@ -1,12 +1,7 @@
-# This script does the following, though in a slightly different order.
-# 1. Merges the training and the test sets to create one data set.
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-# 3. Uses descriptive activity names to name the activities in the data set
-# 4. Appropriately labels the data set with descriptive variable names. 
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# This script aims to create a new dataset called second from the 
 
-# 4. Appropriately labels the data set with descriptive variable names. 
-# ---------------read and label train data---------------
+# 1. Training data and test data are labeled with descriptive variable names, which are the names of the features.
+# ---------------read and label training data---------------
 ## Read subject_train.txt into R and assign variable name "subject_id" to it 
 subject_train=read.table("./train/subject_train.txt")
 colnames(subject_train)="subject_id"
@@ -41,10 +36,10 @@ colnames(X_test)=features[,2]
 ## Combine subject_test,y_test, and X_test into one table called test
 test=cbind(subject_test,y_test,X_test)
 
-# 1. Merge the training and test sets to create one data set
+# 2. The training data and test data of the original dataset were merged to create one single data set
 merged=rbind(train,test)
 
-# 2. Extract only the measurements on the mean and standard deviation for each measurement.  
+# 3. Only the measurements on the mean and standard deviation for each measurement were extracted.  
 extracted=merged[,grep("subject|activity|mean|std",names(merged))]
 ## Here "subject" and "activity" is included as grep arguments like "mean" and "std", so that the subject_id and activity variables are kept.
 
@@ -52,10 +47,10 @@ extracted=merged[,grep("subject|activity|mean|std",names(merged))]
 library(plyr)
 arranged=arrange(extracted,subject_id,activity)
 
-# 3. Uses descriptive activity names to name the activities in the data set.
+# 4. Descriptive activity names (`walking`, `walking_upstairs`, `walking_downstairs`, `sitting`, `standing`, `laying`) were used to replace the integer numbers used in the original dataset.
 levels(arranged$activity)=c("walking","walking_upstairs","walking_downstairs","sitting","standing","laying")
 
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+# 5. A second, tidy dataset with the average of each variable for each activity and each subject is generated.
 ## Create a two-level factor from subject_id and activity
 factor_subject=arranged[,1]
 factor_activity=arranged[,2]
