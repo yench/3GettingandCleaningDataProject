@@ -75,4 +75,4 @@ colnames(second)=names(arranged)
 rownames(second)=NULL
 
 ## Write second into a txt file
-write.table(second,file="second_data_set.txt",row.names=FALSE)
+write.table(second,file="second_dataset.txt",row.names=FALSE)
