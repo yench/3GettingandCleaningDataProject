@@ -25,8 +25,8 @@ From the original dataset, a new, tidy dataset called `second` is generated in t
 ### What is this repo about?
 
 This repo contains 3 fiels: `README.md`, `run_analysis.R`, and `codebook.md`. 
-  * `README.md`: the file you are reading right now. It is an introduction on the whole process of how the "second" dataset is obtained from the original dataset.  
-  * `run_analysis.R`: the R script for excecuting the process to create "second". When the original dataset is in the R working directory and unzipped, running this R script would create the "second".
+  * `README.md`: the file you are reading right now. It is an introduction on the whole process of how `second` dataset is obtained from the original dataset.  
+  * `run_analysis.R`: the R script for excecuting the process to create `second`. When the original dataset is in the R working directory and unzipped, running this R script would create `second`.
   * `Codecook.md`: the codebook explaining the meaning of codes in the `second` dataset.
 
   
