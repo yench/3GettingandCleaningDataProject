@@ -26,7 +26,7 @@ From the original dataset, a new, tidy dataset called `second` is generated in t
 
 This repo contains 3 fiels: `README.md`, `run_analysis.R`, and `codebook.md`. 
   * `README.md`: the file you are reading right now. It is an introduction on the whole process of how `second` dataset is obtained from the original dataset.  
-  * `run_analysis.R`: the R script for excecuting the process to create `second`. When the original dataset is in the R working directory and unzipped, running this R script would create `second`.
+  * `run_analysis.R`: the R script for excecuting the process to create `second`. When the original dataset is unzipped and set as the R working directory, running this R script would create a txt file containing `second` in the working directory.
   * `Codecook.md`: the codebook explaining the meaning of codes in the `second` dataset.
 
 
@@ -34,7 +34,7 @@ This repo contains 3 fiels: `README.md`, `run_analysis.R`, and `codebook.md`.
  1. Download and unzip the "Human Activity Recognition Using Smartphones Datasets", and set the folder `UCI HAR Datasets` as your `R` working directory.
  2. Move `run_analysis.R` into the `UCI HAR Datasets` folder.
  3. Enter the command `source("run_analysis.R")` in R, and you'll find that a file named `second_dataset.txt` is created in the `UCI HAR Datasets` folder. 
- 4. This txt file contains the `second` dataset generated, and you can read it in R with the command `read.table("second_data_set.txt",header=TRUE,check.names=FALSE)`.   
+ 4. This txt file contains the `second` dataset generated, and if you want to manipulate it in `R` , you can read it with the command `read.table("second_data_set.txt",header=TRUE,check.names=FALSE)`.   
 
   
 ### Reference
