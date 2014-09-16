@@ -1,6 +1,6 @@
 Introduction
 =============
-This repo is all about the processing of an original dataset into the dataset desired.
+This repo is all about the processing of an original dataset into the dataset desired, required by the course project of Getting and Cleaning Data.
 
 
 ### Where does the original dataset come from?
