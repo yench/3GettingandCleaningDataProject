@@ -31,9 +31,9 @@ This repo contains 3 fiels: `README.md`, `run_analysis.R`, and `codebook.md`.
 
 
 ### How to apply the run_analysis.R script to create the `second` dataset? 
- 1. Download and unzip the "Human Activity Recognition Using Smartphones Datasets", and set the folder `UCI HAR Datasets` as your `R` working directory.
+ 1. Download and unzip the ["Human Activity Recognition Using Smartphones Datasets"](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip), and set the folder `UCI HAR Datasets` as your `R` working directory.
  2. Move `run_analysis.R` into the `UCI HAR Datasets` folder.
- 3. Enter the command `source("run_analysis.R")` in R, and you'll find that a file named `second_dataset.txt` is created in the `UCI HAR Datasets` folder. 
+ 3. Enter the command `source("run_analysis.R")` in R, and you'll find a file named `second_dataset.txt` created in the `UCI HAR Datasets` folder. 
  4. This txt file contains the `second` dataset generated, and if you want to manipulate it in `R` , you can read it with the command `read.table("second_dataset.txt",header=TRUE,check.names=FALSE)`.   
 
   
